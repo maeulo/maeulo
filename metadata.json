@@ -1,4 +1,0 @@
-{
-  "name": "JSON Content Sorter",
-  "description": "An application to upload a JSON file, extract 'content' fields, sort them, and display the result."
-}
