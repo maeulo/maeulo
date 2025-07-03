@@ -1,0 +1,104 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>채팅 로그 생성기</title>
+    <link rel="stylesheet" href="index.css">
+    <style id="user-generated-styles"></style>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="controls">
+            <h1>채팅 로그 생성기</h1>
+            <div class="control-grid">
+                <fieldset>
+                    <legend>이름 바꾸기</legend>
+                    <div class="name-replacer-group">
+                        <label for="user-name-before">유저 이름</label>
+                        <div class="name-replacer-inputs">
+                            <input type="text" id="user-name-before" placeholder="기존 이름">
+                            <span class="arrow">→</span>
+                            <input type="text" id="user-name-after" placeholder="바꿀 이름">
+                        </div>
+                    </div>
+                    <div class="name-replacer-group">
+                        <label for="char-name-before">캐릭터 이름</label>
+                        <div class="name-replacer-inputs">
+                            <input type="text" id="char-name-before" placeholder="기존 이름">
+                            <span class="arrow">→</span>
+                            <input type="text" id="char-name-after" placeholder="바꿀 이름">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>색상 변경</legend>
+                    <div class="color-picker-container">
+                        <div class="color-picker">
+                            <label for="char-color">캐릭터 말풍선</label>
+                            <input type="color" id="char-color" value="#262727">
+                        </div>
+                        <div class="color-picker">
+                            <label for="user-color">유저 말풍선</label>
+                            <input type="color" id="user-color" value="#7c67ff">
+                        </div>
+                         <div class="color-picker">
+                            <label for="bg-color">채팅 배경</label>
+                            <input type="color" id="bg-color" value="#1a1b1b">
+                        </div>
+                        <div class="color-picker">
+                            <label for="base-font-color">기본 폰트</label>
+                            <input type="color" id="base-font-color" value="#c4bfbf">
+                        </div>
+                        <div class="color-picker">
+                            <label for="double-quote-color">" " 안</label>
+                            <input type="color" id="double-quote-color" value="#fcfcfc">
+                        </div>
+                        <div class="color-picker">
+                            <label for="single-quote-color">' ' 안</label>
+                            <input type="color" id="single-quote-color" value="#8BE9FD">
+                        </div>
+                        <div class="color-picker">
+                            <label for="asterisk-color">* * 안 (기울임)</label>
+                            <input type="color" id="asterisk-color" value="#c4bfbf">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section id="input-section">
+                <h2>대화 내용 입력</h2>
+                <div id="input-rows">
+                    <!-- Dynamic input rows will be added here -->
+                </div>
+                <button id="add-row-btn" class="btn">대화 추가</button>
+            </section>
+
+            <section class="preview-section">
+                 <h2>미리보기</h2>
+                <div id="chat-container-wrapper">
+                    <div id="chat-container">
+                        <!-- Chat bubbles will be rendered here -->
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button id="fullscreen-btn" class="btn primary" disabled>전체화면으로 보기</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Screenshot-friendly Fullscreen Overlay -->
+    <div id="screenshot-overlay" style="display: none;">
+        <div id="screenshot-content"></div>
+    </div>
+
+    <script src="index.js"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
